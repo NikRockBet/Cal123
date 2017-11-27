@@ -25,19 +25,19 @@ public class Controller {
 
             if (result == "Делить на 0 нельзя")
             {
-                resultfield.setStyle("-fx-text-fill: red; -fx-alignment: center;");
+                resultfield.setStyle("-fx-text-fill: red;");
                 resultfield.setText(result);
             }
 
             else if (result == "Неверные символы")
             {
-                resultfield.setStyle("-fx-text-fill: red; -fx-alignment: center;");
+                resultfield.setStyle("-fx-text-fill: red;");
                 resultfield.setText("Неверные символы");
             }
 
             else
             {
-                resultfield.setStyle("-fx-text-fill: green; -fx-alignment: center;");
+                resultfield.setStyle("-fx-text-fill: green;");
                 resultfield.setText(result);
             }
 
