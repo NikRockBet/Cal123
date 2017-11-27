@@ -3,8 +3,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
+
 public class Controller {
 
+    // определили контролы из нашей сцены
     @FXML
     public TextField resultfield;
     @FXML
@@ -12,9 +14,10 @@ public class Controller {
     @FXML
     public TextField field2;
 
-    @FXML
+    @FXML    // событие по нажатию на кнопку "="
     public void getResult (ActionEvent event) {
 
+        // считали значение текстфилдов в переменные
             String number1 = field1.getText();
             String number2 = field2.getText();
 

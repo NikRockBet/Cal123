@@ -10,6 +10,7 @@ public class Calculate {
     public static String totals(String number1, String number2) {
         try {
 
+            // переконвертировали полученные переменные в тип Double
             Double numberFirst = Double.valueOf(number1);
             Double numberSecond = Double.valueOf(number2);
 
@@ -22,7 +23,7 @@ public class Calculate {
                 String result = Double.toString(numberFirst / numberSecond);
                 return result;
             }
-
+                // обрабатываем исключение, при неверном вводе символом
         } catch (NumberFormatException e)
 
         {
