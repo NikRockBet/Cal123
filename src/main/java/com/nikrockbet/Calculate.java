@@ -7,13 +7,29 @@ import com.nikrockbet.Controller;
 
 public class Calculate {
 
-    public static String totals(double number1, double number2) {
-        if (number2 == 0) {
-            String result = "Делить на 0 нельзя";
-            return result;
-        } else {
-            String result = Double.toString(number1 / number2);
+    public static String totals(String number1, String number2) {
+        try {
+
+            Double numberFirst = Double.valueOf(number1);
+            Double numberSecond = Double.valueOf(number2);
+
+
+            if (numberSecond == 0) {
+                String result = "Делить на 0 нельзя";
+                return result;
+
+            } else {
+                String result = Double.toString(numberFirst / numberSecond);
+                return result;
+            }
+
+        } catch (NumberFormatException e)
+
+        {
+            String result = "Неверные символы";
             return result;
         }
+
+
     }
 }

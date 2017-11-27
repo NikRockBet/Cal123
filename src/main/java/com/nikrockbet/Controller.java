@@ -14,9 +14,9 @@ public class Controller {
 
     @FXML
     public void getResult (ActionEvent event) {
-        try {
-            double number1 = Double.parseDouble(field1.getText());
-            double number2 = Double.parseDouble(field2.getText());
+
+            String number1 = field1.getText();
+            String number2 = field2.getText();
 
             String result = Calculate.totals(number1, number2);
 
@@ -26,16 +26,17 @@ public class Controller {
                 resultfield.setText(result);
             }
 
+            else if (result == "Неверные символы")
+            {
+                resultfield.setStyle("-fx-text-fill: red; -fx-alignment: center;");
+                resultfield.setText("Неверные символы");
+            }
+
             else
             {
                 resultfield.setStyle("-fx-text-fill: green; -fx-alignment: center;");
                 resultfield.setText(result);
             }
 
-
-        } catch (NumberFormatException e) {
-            resultfield.setStyle("-fx-text-fill: red; -fx-alignment: center;");
-            resultfield.setText("Неверные символы");
         }
     }
-}
